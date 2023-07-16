@@ -101,43 +101,43 @@ function CrateDrop(item, amount, planeSpawnDistance, dropCoords)
 end
 
 -- notify police functions
-function PoliceAlert()
+--function PoliceAlert()
     -- put your own dispatch here and comment the below event
-    TriggerServerEvent('police:server:policeAlert', 'Suspicious activity')
-end
+    --TriggerServerEvent('police:server:policeAlert', 'Suspicious activity')
+--end
 
 -- Give random item from given list of the item used
-function GetRandomItemData(item)
-    if Config.ItemDrops[item] then
-        local Items = Config.ItemDrops[item]
-        local randomItem = Items[math.random(#Items)]
-        return randomItem["name"], randomItem["amount"]
-    end    
-end
+--function GetRandomItemData(item)
+   -- if Config.ItemDrops[item] then
+     --   local Items = Config.ItemDrops[item]
+       -- local randomItem = Items[math.random(#Items)]
+       -- return randomItem["name"], randomItem["amount"]
+    --end    
+--end
 
 -- Make target available for all players
-RegisterNetEvent("cad-gundrop:client:showTarget", function(obj, item, amount)
-    local crate = NetToObj(obj)
-    exports[Config.TargetName]:AddTargetEntity(crate, {
-        options = {
-        {           
-            icon = Config.TargetIcon,
-            label = Config.TargetLabel,
-            action = function(entity)
-                TriggerServerEvent("cad-gundrop:server:removeTarget", obj)
-                OpenCrate(crate, item, amount)                 
-            end,      
-        }
-        },
-        distance = 2.5,
-    })
-end)
+--RegisterNetEvent("cad-gundrop:client:showTarget", function(obj, item, amount)
+  --  local crate = NetToObj(obj)
+    --exports[Config.TargetName]:AddTargetEntity(crate, {
+      --  options = {
+        --{           
+          --  icon = Config.TargetIcon,
+            --label = Config.TargetLabel,
+           -- action = function(entity)
+             --   TriggerServerEvent("cad-gundrop:server:removeTarget", obj)
+              --  OpenCrate(crate, item, amount)                 
+           -- end,      
+       -- }
+       -- },
+       -- distance = 2.5,
+    --})
+--end)
 
 -- Remove target from all players as soon as someone opens the crate
-RegisterNetEvent("cad-gundrop:client:removeTarget", function(obj)
-    local crate = NetToObj(obj)
-    exports[Config.TargetName]:RemoveTargetEntity(crate, Config.TargetLabel)
-end)
+--RegisterNetEvent("cad-gundrop:client:removeTarget", function(obj)
+  --  local crate = NetToObj(obj)
+   -- exports[Config.TargetName]:RemoveTargetEntity(crate, Config.TargetLabel)
+--end)
 
 
 -- Start the AirDrop
