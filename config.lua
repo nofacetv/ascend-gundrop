@@ -13,7 +13,7 @@ Config.RequiredCops = 0 -- How many cops are required to drop a gun?
 Config.PoliceJobs = {"police"} -- All types of police job in server.
 
 -- Other Config
-Config.TimeUntilDrop = 5 -- How long does it take to drop a gun? (in minutes)
+Config.TimeUntilDrop = 1 -- How long does it take to drop a gun? (in minutes)
 Config.Cooldown = 0 -- in mins
 
 -- Objects and models Config
@@ -28,38 +28,24 @@ Config.CrateModel = "ex_prop_adv_case_sm" -- Model of the crate.
 -- Item Drops Config
 Config.ItemDrops = {
     ["goldenphone"] = {
-        [1] = {name = "WEAPON_CARBINERIFLE", amount = 5},           ------------ This phone costs the buyer 750K
-        [2] = {name = "WEAPON_PUMPSHOTGUN", amount = 10},
-        [3] = {name = "weapon_g17", amount = 10},
-        [4] = {name = "rifle_ammo", amount= 25},
-        [5] = {name = "shotgun_ammo", amount = 50},
-        [6] = {name = "pistol_ammo", amount = 75},    
+        [1] = {name = "weapon_mk18", amount = 10},           ------------ This phone costs the buyer 750K    
     },
     ["redphone"] = {
-        [1] = {name = "WEAPON_CARBINERRIFLE", amount = 3},   -------------This phone costs the buyer 500k
-        [2] = {name = "WEAPON_PUMPSHOTGUN", amount = 5},
-        [3] = {name = "weapon_g17", amount = 10},
-        [4] = {name = "rifle_ammo", amount= 15},
-        [5] = {name = "shotgun_ammo", amount = 25},
-        [6] = {name = "pistol_ammo", amount = 50},
+        [1] = {name = "weapon_mpx", amount = 10},   -------------This phone costs the buyer 500k
     },
     ["greenphone"] = {
-        [1] = {name = "WEAPON_CARBINERRIFLE", amount = 1},   -------------------- this phone costs the buyer 250k
-        [2] = {name = "WEAPON_PUMPSHOTGUN", amount = 3},
-        [3] = {name = "weapon_g17", amount = 5},
-        [4] = {name = "rifle_ammo", amount= 5},
-        [5] = {name = "shotgun_ammo", amount = 15},
-        [6] = {name = "pistol_ammo", amount = 25}, 
+        [1] = {name = "weapon_m870", amount = 10},   -------------------- this phone costs the buyer 250k
     },
 }
 
 -- Locale Config
 Config.Lang = { 
-    ["contacted_mafia"] = "You Have Contacted With the hightable",
+    ["contacted_mafia"] = "You Have Contacted the hightable",
     ["pilot_contact"] = "After few minutes pilot will contact you",
     ["no_cops"] = "Not enough cops",
     ["pilot_dropping_soon"] = "Pilot: We are preparing the crate with the plane and will be dropping it soon",
     ["pilot_crashed"] = "The plane has crashed delivery failed",
-    ["crate_dropping"] = "Pilot: keep the eye on sky the crate is droping",
+w    ["crate_dropping"] = "Pilot: keep the eye on sky the crate is droping",
     ["item_recieved"] = "You opened the crate and recieved",
 }
+
