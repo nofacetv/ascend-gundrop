@@ -1,9 +1,9 @@
 fx_version 'cerulean'
 games { 'gta5' }
 
-author 'Cadburry#7547'
+author 'NoFaceTV'
 description 'Item Air drop system for qbcore'
-version '1.0'
+version '1.2'
 
 shared_scripts {
     "config.lua",
