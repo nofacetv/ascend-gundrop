@@ -9,12 +9,12 @@ Config.TargetIcon = 'fab fa-dropbox'
 Config.TargetLabel = 'Open Crate'
 
 -- Police Config
-Config.RequiredCops = 4 -- How many cops are required to drop a gun?
+Config.RequiredCops = 0 -- How many cops are required to drop a gun?
 Config.PoliceJobs = {"police"} -- All types of police job in server.
 
 -- Other Config
-Config.TimeUntilDrop = 2 -- How long does it take to drop a gun? (in minutes)
-Config.Cooldown = 5 -- in mins
+Config.TimeUntilDrop = 5 -- How long does it take to drop a gun? (in minutes)
+Config.Cooldown = 0 -- in mins
 
 -- Objects and models Config
 Config.LoadModels = {"w_am_flare", "p_cargo_chute_s", "ex_prop_adv_case_sm", "cuban800", "s_m_m_pilot_02"} -- Models to pre-load.
@@ -28,20 +28,34 @@ Config.CrateModel = "ex_prop_adv_case_sm" -- Model of the crate.
 -- Item Drops Config
 Config.ItemDrops = {
     ["goldenphone"] = {
-        [1] = {name = "WEAPON_CARBINERIFLE", amount = 1},
-        [2] = {name = "WEAPON_ADVANCEDRIFLE", amount = 1},    
+        [1] = {name = "WEAPON_CARBINERIFLE", amount = 5},           ------------ This phone costs the buyer 750K
+        [2] = {name = "WEAPON_PUMPSHOTGUN", amount = 10},
+        [3] = {name = "weapon_g17", amount = 10},
+        [4] = {name = "rifle_ammo", amount= 25},
+        [5] = {name = "shotgun_ammo", amount = 50},
+        [6] = {name = "pistol_ammo", amount = 75},    
     },
     ["redphone"] = {
-        [1] = {name = "WEAPON_ASSAULTRIFLE", amount = 1},  
+        [1] = {name = "WEAPON_CARBINERRIFLE", amount = 3},   -------------This phone costs the buyer 500k
+        [2] = {name = "WEAPON_PUMPSHOTGUN", amount = 5},
+        [3] = {name = "weapon_g17", amount = 10},
+        [4] = {name = "rifle_ammo", amount= 15},
+        [5] = {name = "shotgun_ammo", amount = 25},
+        [6] = {name = "pistol_ammo", amount = 50},
     },
     ["greenphone"] = {
-        [1] = {name = "WEAPON_SMG", amount = 1},
+        [1] = {name = "WEAPON_CARBINERRIFLE", amount = 1},   -------------------- this phone costs the buyer 250k
+        [2] = {name = "WEAPON_PUMPSHOTGUN", amount = 3},
+        [3] = {name = "weapon_g17", amount = 5},
+        [4] = {name = "rifle_ammo", amount= 5},
+        [5] = {name = "shotgun_ammo", amount = 15},
+        [6] = {name = "pistol_ammo", amount = 25}, 
     },
 }
 
 -- Locale Config
 Config.Lang = { 
-    ["contacted_mafia"] = "You Have Contacted With Russian Mafia",
+    ["contacted_mafia"] = "You Have Contacted With the hightable",
     ["pilot_contact"] = "After few minutes pilot will contact you",
     ["no_cops"] = "Not enough cops",
     ["pilot_dropping_soon"] = "Pilot: We are preparing the crate with the plane and will be dropping it soon",
